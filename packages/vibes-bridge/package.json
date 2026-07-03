@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@opencode-ai/vibes-bridge",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "dependencies": {
+    "@opencode-ai/client": "workspace:*",
+    "@opencode-ai/core": "workspace:*",
+    "@opencode-ai/sdk-next": "workspace:*",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "catalog:",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}
