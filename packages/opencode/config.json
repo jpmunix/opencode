@@ -1,0 +1,144 @@
+{
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-f9a3868c-2ebc-4825-9001-6b9d8de4b476"
+      }
+    },
+    "Codegraph": {
+      "type": "local",
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp",
+        "--path",
+        "/home/munix/vibes-apps/hmail"
+      ],
+      "environment": {
+        "PROJECT_PATH": "/home/munix/vibes-apps/hmail"
+      },
+      "enabled": true
+    }
+  },
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "plan": {
+      "options": {
+        "reasoningEffort": "medium",
+        "textVerbosity": "low"
+      },
+      "permission": {
+        "edit": "allow",
+        "bash": {
+          "*": "deny"
+        }
+      },
+      "reasoningEffort": "medium",
+      "textVerbosity": "low",
+      "model": "openrouter/qwen/qwen3.6-35b-a3b"
+    },
+    "build": {
+      "options": {
+        "reasoningEffort": "medium",
+        "textVerbosity": "low"
+      },
+      "permission": {
+        "read": "allow",
+        "edit": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "bash": {
+          "*": "ask",
+          "ls *": "allow",
+          "cat *": "allow",
+          "head *": "allow",
+          "tail *": "allow",
+          "grep *": "allow",
+          "rg *": "allow",
+          "find *": "allow",
+          "wc *": "allow",
+          "pwd": "allow",
+          "echo *": "allow",
+          "which *": "allow",
+          "type *": "allow",
+          "file *": "allow",
+          "stat *": "allow",
+          "du *": "allow",
+          "df *": "allow",
+          "env": "allow",
+          "printenv *": "allow",
+          "node --version*": "allow",
+          "node -e *": "allow",
+          "npm list*": "allow",
+          "npm ls*": "allow",
+          "npm --version*": "allow",
+          "npx --version*": "allow",
+          "git status*": "allow",
+          "git log*": "allow",
+          "git diff*": "allow",
+          "git show*": "allow",
+          "git branch": "allow",
+          "git branch -a*": "allow",
+          "git branch -v*": "allow",
+          "git remote*": "allow",
+          "git stash list*": "allow",
+          "rm *": "ask",
+          "git add *": "ask",
+          "git commit *": "ask",
+          "git reset *": "ask",
+          "git checkout *": "ask",
+          "git restore *": "ask",
+          "git clean *": "ask",
+          "git rebase *": "ask",
+          "git merge --abort*": "ask",
+          "git stash drop*": "ask",
+          "git branch -D *": "ask",
+          "git branch -d *": "ask",
+          "git branch --delete *": "ask",
+          "git cherry-pick --abort*": "ask",
+          "git push *": "deny",
+          "git push --force*": "deny",
+          "git push -f *": "deny",
+          "git push --delete *": "deny",
+          "npm install *": "allow",
+          "npm uninstall *": "allow",
+          "npx *": "allow",
+          "npm run build *": "allow"
+        },
+        "task": "allow",
+        "external_directory": "ask",
+        "todowrite": "allow",
+        "question": "allow",
+        "webfetch": "allow",
+        "websearch": "ask",
+        "lsp": "allow",
+        "doom_loop": "allow",
+        "skill": "allow"
+      },
+      "reasoningEffort": "medium",
+      "textVerbosity": "low"
+    },
+    "general": {
+      "model": "openrouter/qwen/qwen3.6-35b-a3b",
+      "options": {},
+      "permission": {}
+    },
+    "explore": {
+      "model": "openrouter/qwen/qwen3.6-35b-a3b",
+      "options": {},
+      "permission": {}
+    }
+  },
+  "model": "openrouter/qwen/qwen3.6-35b-a3b",
+  "provider": {
+    "openrouter": {
+      "models": {
+        "qwen/qwen3.6-35b-a3b": {}
+      }
+    }
+  }
+}
