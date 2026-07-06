@@ -9,6 +9,7 @@
         "@opencode-ai/plugin": "workspace:*",
         "@opencode-ai/script": "workspace:*",
         "@opencode-ai/sdk": "workspace:*",
+        "aws4fetch": "1.0.20",
         "heap-snapshot-toolkit": "1.1.3",
         "typescript": "catalog:",
       },
@@ -1018,6 +1019,20 @@
         "solid-js": "^1.9.0",
       },
     },
+    "packages/vibes-bridge": {
+      "name": "@opencode-ai/vibes-bridge",
+      "dependencies": {
+        "@opencode-ai/client": "workspace:*",
+        "@opencode-ai/core": "workspace:*",
+        "@opencode-ai/sdk-next": "workspace:*",
+        "effect": "catalog:",
+      },
+      "devDependencies": {
+        "@tsconfig/bun": "catalog:",
+        "@types/bun": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
     "packages/web": {
       "name": "@opencode-ai/web",
       "version": "1.17.13",
@@ -1999,6 +2014,8 @@
     "@opencode-ai/tui": ["@opencode-ai/tui@workspace:packages/tui"],
 
     "@opencode-ai/ui": ["@opencode-ai/ui@workspace:packages/ui"],
+
+    "@opencode-ai/vibes-bridge": ["@opencode-ai/vibes-bridge@workspace:packages/vibes-bridge"],
 
     "@opencode-ai/web": ["@opencode-ai/web@workspace:packages/web"],
 
